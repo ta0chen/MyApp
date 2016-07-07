@@ -18,6 +18,8 @@ app.use(bodyParser());
 app.use(require('./todos'));
 
 //start the server
-app.listen(8787, function () {
-    console.log('ready on port 8787');
+var port = process.env.PORT || 8787
+
+app.listen(port, function () {
+    console.log('Server ready on port ' + port);
 });
